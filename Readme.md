@@ -18,7 +18,6 @@ Welcome to the Parapharmacy Application, a modern platform developed using Djang
 - **Chatbot**: Dialogflow for chatbot integration
 - **Database**: SQLite (default) or PostgreSQL
 - **Authentication**: Django’s built-in authentication system
-- **APIs**: RESTful API for integrating the chatbot and other services
 
 ## Installation
 
@@ -32,8 +31,8 @@ Welcome to the Parapharmacy Application, a modern platform developed using Djang
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/parapharmacy-app.git
-cd parapharmacy-app
+git clone https://github.com/stahiomar/parapharmacy-chatbot-alimented.git
+cd parapharmacy-chatbot-alimented
 ```
 
 ### Set Up Virtual Environment
@@ -43,12 +42,6 @@ It's recommended to use a virtual environment for your project.
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
 ```
 
 ### Set Up Database
@@ -105,6 +98,17 @@ We welcome contributions! To contribute to the development of the Parapharmacy a
 3. Make your changes and commit them (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
+
+## Sample schreenshots from the application
+
+### Store interface
+![image](https://github.com/user-attachments/assets/18fa504c-db81-45c3-b2dc-896013353dc8)
+
+### Checkout page
+![image](https://github.com/user-attachments/assets/9c1e1ac4-4be2-4dfb-8570-200542ceea7a)
+
+### Chatbot
+![image](https://github.com/user-attachments/assets/a5c7135b-1ca7-44a1-94cd-35d5a18e8c3e)
 
 ## Acknowledgments
 
