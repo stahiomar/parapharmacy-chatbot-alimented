@@ -1,36 +1,114 @@
-# Ecommerce Website with Django
 
-This project was created for educational purposes !
+# Parapharmacy Application
 
-## Clone the project
-<b>The following steps suppose that you already have installed Git !</b>    
+Welcome to the Parapharmacy Application, a modern platform developed using Django for managing and selling pharmaceutical products online, with integrated customer support powered by Dialogflow's chatbot.
 
-To run the project on windows, Do the following steps :
-- Copy the following link : https://github.com/hamzastahi/ecommerce-django.git
-- Go to your Editor (VS Code), click on Git button on the right and choose "Clone Repository" :   
-![image](https://user-images.githubusercontent.com/64877852/187123990-87620479-de60-4ad8-839b-7af1726d8410.png)
-- A popup will appear on the top of your VS Code editor   
-![image](https://user-images.githubusercontent.com/64877852/187125325-4ddf82e2-602c-4be5-a7e7-bcdc3ba4cd8c.png)
-- Paste the already copied link and click Enter
-- Choose where you want to put the project (Ex : on your desktop)
-![image](https://user-images.githubusercontent.com/64877852/187125437-b7d22532-eb76-407c-93d8-49d43585fc73.png)
-- Wait for git to clone your project
-- When finished, you should have a popup window on the bottom of your VS Code editor telling you if you want to open the project  
-![image](https://user-images.githubusercontent.com/64877852/187125659-28c88f12-f3ad-4746-87b1-0f18fd3f5afe.png)
-- Click on "Open"
+## Features
 
-## Create Virtual environment :
-If you are using windows, you could ignore this part, because the environment is already present in the project.  
-If you are using Linux or MacOS, Follow thoes steps :
-- Open the integrated terminal on VS Code
-- Create your virtual environment with the following command : ***python3 -m venv env_mac***
+- **Product Management**: Manage pharmaceutical products including their details, prices, and availability.
+- **Customer Support**: A chatbot powered by Dialogflow to assist customers with common questions and product inquiries.
+- **Order Management**: Users can view, place, and track orders for pharmaceutical products.
+- **User Authentication**: Secure user authentication system for customers to sign up, log in, and manage their accounts.
+- **Responsive Design**: The application is designed to work seamlessly across various devices, including mobile phones and desktops.
 
-## Run the project on Windows
-To run the project on windows, Open the integrated terminal of VS Code and run the following commands :
-- Activate your environment : ***.\env\Scripts\activate</i>***  
-- Start the project : ***python manage.py runserver***
+## Tech Stack
 
-## Run the project on MacOS
-To run the project on MacOS, Open the integrated terminal of VS Code and run the following commands :
-- Activate your environment : ***source env/bin/activate***
-- Start the project : ***python manage.py runserver***
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS, JavaScript (with optional integration of frontend libraries or frameworks like React)
+- **Chatbot**: Dialogflow for chatbot integration
+- **Database**: SQLite (default) or PostgreSQL
+- **Authentication**: Django’s built-in authentication system
+- **APIs**: RESTful API for integrating the chatbot and other services
+
+## Installation
+
+### Prerequisites
+
+1. Python 3.x
+2. Django
+3. Dialogflow API credentials
+4. A database (SQLite or PostgreSQL)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/parapharmacy-app.git
+cd parapharmacy-app
+```
+
+### Set Up Virtual Environment
+
+It's recommended to use a virtual environment for your project.
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Set Up Database
+
+- For SQLite (default), no further configuration is needed.
+- For PostgreSQL, update the `DATABASES` setting in `settings.py` with your PostgreSQL credentials.
+
+Run migrations to set up the database:
+
+```bash
+python manage.py migrate
+```
+
+### Set Up Dialogflow
+
+1. Create a Dialogflow agent at [Dialogflow Console](https://dialogflow.cloud.google.com/).
+2. Get the **Dialogflow API credentials** (service account key JSON file) from the Dialogflow console.
+3. Add the JSON file to your project directory and set up environment variables to authenticate the Dialogflow API.
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="path_to_your_service_account_key.json"
+```
+
+### Start the Development Server
+
+Once everything is set up, run the following command to start the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+You can access the application at `http://127.0.0.1:8000/` in your browser.
+
+### Testing the Chatbot
+
+To test the Dialogflow chatbot:
+
+1. Start the Django development server.
+2. Visit the chatbot interface (can be a frontend page that integrates the chatbot or the admin interface).
+3. Interact with the chatbot and ensure it responds correctly to your queries.
+
+## Usage
+
+1. **Manage Products**: Admins can log into the Django admin panel and manage the products in the Parapharmacy store.
+2. **Customer Interaction**: The chatbot helps customers find the products they need, answer FAQs, and even help them place orders.
+3. **Order Placement**: Users can browse available products, add them to their cart, and proceed to checkout.
+
+## Contributing
+
+We welcome contributions! To contribute to the development of the Parapharmacy application:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## Acknowledgments
+
+- [Dialogflow](https://dialogflow.cloud.google.com/) for providing chatbot functionality.
+- [Django](https://www.djangoproject.com/) for the web framework.
+- [PostgreSQL](https://www.postgresql.org/) for the database system (optional).
+  
